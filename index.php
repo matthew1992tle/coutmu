@@ -344,7 +344,7 @@ Get Out Of Here Idiot🖕
 
             }
         }
-        else if($rpto !="" && ($chat_id==$admin1||$chat_id==$admin2){
+        else if($rpto !="" && ($chat_id==$admin1||$chat_id==$admin2)){
             $video = $message['document']['file_id'];
             $caption = $message['caption'];
             //apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => $video ,"parse_mode" =>"HTML"));
@@ -560,7 +560,7 @@ Get Out Of Here Idiot🖕
 
 
 
-            if($chat_id!=$admin){
+            if($chat_id!=$admin1&&$chat_id!=$admin2){
                 apiRequest("sendMessage", array('chat_id' => $chat_id,"text"=>$pmembersiddd[0] ,"parse_mode"=>"HTML"));
 
                 $txxt = file_get_contents('pmembers.txt');
@@ -643,7 +643,8 @@ Get Out Of Here Idiot🖕
                 }
                 else{
                     $textfa =str_replace("thisisnarimanfrombeatbotteam","🖕",$text);;
-                    apiRequest("sendMessage", array('chat_id' => $admin, "text" =>  $textfa,"parse_mode" =>"HTML"));
+                    apiRequest("sendMessage", array('chat_id' => $admin1, "text" =>  $textfa,"parse_mode" =>"HTML"));
+                    apiRequest("sendMessage", array('chat_id' => $admin2, "text" =>  $textfa,"parse_mode" =>"HTML"));
                     apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => $pmembersiddd[1] ,"parse_mode" =>"HTML"));
 
                 }
