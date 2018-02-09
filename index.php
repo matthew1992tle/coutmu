@@ -857,7 +857,7 @@ Get Out Of Here Idiot🖕
 }
 
 
-define('WEBHOOK_URL', 'https://coutmu.epizy.com/mybot/');
+define('WEBHOOK_URL', 'https://mybot-coutmu.193b.starter-ca-central-1.openshiftapps.com/');
 
 if (php_sapi_name() == 'cli') {
     // if run from console, set or delete webhook
