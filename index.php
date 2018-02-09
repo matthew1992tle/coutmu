@@ -288,7 +288,7 @@ Get Out Of Here Idiot🖕
 
             }
         }
-        else if($rpto !="" && ($chat_id==$admin1||$chat_id==$admin2){
+        else if($rpto !="" && ($chat_id==$admin1||$chat_id==$admin2)){
             $sticker = $message['sticker']['file_id'];
 
             apiRequest("sendsticker", array('chat_id' => $rpto, "sticker" => $sticker));
